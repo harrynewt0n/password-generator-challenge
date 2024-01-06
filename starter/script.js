@@ -131,6 +131,48 @@ return randomChar;
 function generatePassword() {
 let passwordOptions = getPasswordOptions();
 
+let passwordArray = [];
+
+let possibleChar = [];
+
+let garuanteedChar = [];
+
+if (passwordOptions.includeLower){
+
+  possibleChar = possibleChar.concat (lowerCasedCharacters);
+  garuanteedChar.push (getRandom(lowerCasedCharacters));
+}
+
+if (passwordOptions.includeUpper){
+
+  possibleChar = possibleChar.concat (upperCasedCharacters);
+  garuanteedChar.push (getRandom(upperCasedCharacters));
+}
+
+if (passwordOptions.includeNumbers){
+
+  possibleChar = possibleChar.concat (numericCharacters);
+  garuanteedChar.push (getRandom(numericCharacters));
+}
+
+if (passwordOptions.includeSpecial){
+
+  possibleChar = possibleChar.concat (specialCharacters);
+  garuanteedChar.push (getRandom(specialCharacters));
+}
+console.log('Possible char = ', possibleChar);
+
+let garuanteedLength = garuanteedChar.length;
+
+for (let i = 0; i < garuanteedLength; i++) {
+
+  passwordArray[i] = garuanteedChar[i];
+}
+
+for (let i = garuanteedLength; i < passwordOptions.passwordLength; i++) {
+  passwordArray[i] =  getRandom(possibleChar)
+}
+return passwordArray.join('')
 }
 
 // Get references to the #generate element

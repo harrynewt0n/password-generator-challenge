@@ -90,7 +90,11 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-let passwordLength = prompt('How many characters for your password?');
+let passwordLength = parseInt(prompt('How many characters for your password?'));
+if (isNaN(passwordLength) === true) {
+  alert ('Password length must be a number between 8 and 128')
+}
+
 alert('You chose: ' + passwordLength)
 }
 

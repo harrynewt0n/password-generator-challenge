@@ -103,6 +103,21 @@ let includeLower = confirm ('Do you want to include lower case characters in pas
 let includeUpper = confirm ('Do you want to include Upper case characters in password?');
 let includeNumbers = confirm ('Do you want to include number characters in password?');
 let includeSpecial = confirm ('Do you want to include special characters in password?');
+
+if (includeLower === false && includeUpper === false &&
+    includeNumbers === false && includeSpecial === false) {
+      alert ('You must select at least one character type');
+      return;
+    }
+    
+    let options = {
+      passwordLength: passwordLength,
+      includeLower: includeLower,
+      includeUpper: includeUpper,
+      includeNumbers: includeNumbers,
+      includeSpecial: includeSpecial,
+    }
+    return options;
 }
 
 // Function for getting a random element from an array

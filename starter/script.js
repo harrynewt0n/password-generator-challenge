@@ -100,6 +100,9 @@ if (passwordLength < 8 || passwordLength > 128) {
 alert('You chose: ' + passwordLength)
 
 let includeLower = confirm ('Do you want to include lower case characters in password?');
+let includeUpper = confirm ('Do you want to include Upper case characters in password?');
+let includeNumbers = confirm ('Do you want to include number characters in password?');
+let includeSpecial = confirm ('Do you want to include special characters in password?');
 }
 
 // Function for getting a random element from an array

@@ -122,7 +122,9 @@ if (includeLower === false && includeUpper === false &&
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+let index = Math.floor (Math.random() * arr.length);
+let randomChar = arr[index];
+return randomChar;
 }
 
 // Function to generate password with user input

@@ -94,8 +94,12 @@ let passwordLength = parseInt(prompt('How many characters for your password?'));
 if (isNaN(passwordLength) === true) {
   alert ('Password length must be a number between 8 and 128')
 }
-
+if (passwordLength < 8 || passwordLength > 128) {
+  alert ('Password length must be between 8 and 128')
+}
 alert('You chose: ' + passwordLength)
+
+let includeLower = confirm ('Do you want to include lower case characters in password?');
 }
 
 // Function for getting a random element from an array

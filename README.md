@@ -13,7 +13,7 @@ To utilise this application you can visit the webpage by following this URL:
 
 This should open up at webpage that looks like this: 
 
-![Deployed application in browser](assets/Deployed-application.jpg)
+![Screenshot of application in live browser](assets/images/Deployed-application.jpg)
 
 Click on the 'Generate Password' button and follow the on screen prompts until the application generates a unique password based on your input criteria.
 ## Credits
